@@ -23,5 +23,8 @@
     <ClInclude Include="heap.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="graph.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
