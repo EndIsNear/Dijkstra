@@ -14,7 +14,7 @@ class Graph
 
 	void deleteMatr()
 	{
-		for (size_t cnt = 0; cnt < size; ++cnt)
+		for (size_t cnt = 0; cnt < this->maxSize; ++cnt)
 		{
 			delete[] this->adjMatr[cnt];
 		}
@@ -29,13 +29,13 @@ class Graph
 
 	void copyMatr(int** src, int*** dest, size_t size, size_t maxSize)
 	{
-		*dest = new int*[maxSize];
-		for (size_t cnt = 0; cnt < size; ++cnt)
+		*dest = new int*[this->maxSize];
+		for (size_t cnt = 0; cnt < this->maxSize; ++cnt)
 		{
-			*dest[cnt] = new int[maxSize];
+			*dest[cnt] = new int[this->maxSize];
 		}
-		for (size_t cnt = 0; cnt < size; ++cnt)
-			for (size_t cnt2 = 0; cnt2 < size; ++cnt2)
+		for (size_t cnt = 0; cnt < this->maxSize; ++cnt)
+			for (size_t cnt2 = 0; cnt2 < this->maxSize; ++cnt2)
 			{
 				if (cnt < size && cnt2 < size)
 					*dest[cnt][cnt2] = src[cnt][cnt2];
