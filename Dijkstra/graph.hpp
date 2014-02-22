@@ -25,6 +25,8 @@ class Graph
 	{
 		int ** newMatr;
 		copyMatr(this->adjMatr, &newMatr, this->size, newSize);
+		deleteMatr();
+		this->adjMatr = newMatr;
 	}
 
 	void copyMatr(int** src, int*** dest, size_t size, size_t maxSize)
