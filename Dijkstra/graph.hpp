@@ -89,7 +89,7 @@ public:
 			this->adjMatr[from][to] = 0;
 	}
 
-	bool hasEdge(size_t from, size_t to)
+	int hasEdge(size_t from, size_t to)
 	{
 		if (from < size && to < size)
 			return this->adjMatr[from][to];
@@ -114,6 +114,11 @@ public:
 			}
 			cout << endl;
 		}
+	}
+
+	size_t GetSize()
+	{
+		return this->size;
 	}
 
 };
