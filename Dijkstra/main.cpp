@@ -38,6 +38,7 @@ void dijkstra(Graph& gr, int start)
 	{
 		cout << "From node[" << start << "] to [" << i << "]:" << dist[i] << endl;
 	}
+	delete[] dist;
 }
 
 void inputGraph(Graph& gr)
