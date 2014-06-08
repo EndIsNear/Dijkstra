@@ -44,18 +44,18 @@ void dijkstra(Graph& gr, int start)
 void inputGraph(Graph& gr)
 {
 	int from, to, n, weigth;
-	cout << "Vavedete broi varhove:";
+	cout << "Number of nodes:";
 	cin >> n;
 	gr.addNodes(n);
-	cout << "Vavedete broi rebra:";
+	cout << "Number of edges:";
 	cin >> n;
 	while (n > 0)
 	{
-		cout << "Ot:";
+		cout << "From:";
 		cin >> from;
-		cout << "kam:";
+		cout << "To:";
 		cin >> to;
-		cout << "Teglo:" ;
+		cout << "Wieght:" ;
 		cin >> weigth;
 
 		gr.addEdge(from, to, weigth);
@@ -70,7 +70,7 @@ int main()
 	gr.print();
 
 	int n;
-	cout << "Startova poziciq:" << endl;
+	cout << "Start node:" << endl;
 	cin >> n;
 
 	dijkstra(gr, n);
